@@ -1,0 +1,155 @@
+:root {
+  /* Fonts */
+  --poppins: "Poppins", sans-serif;
+
+  /* Colors */
+  --primary: #ffb300;
+  --secondary: #ffe082;
+  --dark: #191919;
+  --dark-alt: #2d2a25;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+}
+*::selection {
+  background: var(--dark);
+  color: var(--light);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--poppins);
+  background: var(--light-alt);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Container */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* Button */
+.button {
+  background: var(--secondary);
+  border: 0;
+  outline: 0;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-alt);
+  cursor: pointer;
+  flex: 1;
+  border-radius: 0;
+  border-right: 1px solid #0003;
+  transition: 0.5s ease all;
+}
+.button:last-child {
+  border-right: 0;
+}
+.button.active {
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* Section */
+section {
+  width: 100%;
+  background: var(--primary);
+}
+section .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+section h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 30px;
+}
+section .card {
+  width: 60%;
+  background: var(--light);
+  box-shadow: 0 0 10px 2px #0003;
+  border-radius: 5px;
+  text-align: center;
+}
+section .button-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .tabs {
+  position: relative;
+  width: 100%;
+  transition: 0.5s ease all;
+}
+section .tabs .tab {
+  width: auto;
+  padding: 30px;
+  text-align: left;
+  display: none;
+}
+section .tabs .tab.active {
+  display: block;
+}
+section .tabs .tab h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 20px;
+}

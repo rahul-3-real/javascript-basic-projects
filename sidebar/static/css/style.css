@@ -1,0 +1,173 @@
+:root {
+  /* Fonts */
+  --poppins: "Poppins", sans-serif;
+
+  /* Colors */
+  --primary: #ffb300;
+  --secondary: #4caf50;
+  --dark: #191919;
+  --dark-alt: #2d2a25;
+  --light: #ffffff;
+  --light-alt: #f4fcfc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+}
+*::selection {
+  background: var(--secondary);
+  color: var(--light);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--poppins);
+  background: var(--light-alt);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-alt);
+}
+
+/* Container */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* Button */
+.button {
+  background: var(--light);
+  border: 0;
+  outline: 0;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid var(--light);
+  color: var(--dark-alt);
+  cursor: pointer;
+}
+
+/* Toggle */
+.toggle {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+}
+
+/* Sidebar */
+aside {
+  transition: 0.5s ease all;
+  position: fixed;
+  top: 0;
+  left: -500px;
+  width: 400px;
+  height: 100%;
+  background: var(--light-alt);
+  box-shadow: 0 0 10px 5px #0003;
+  padding: 15px 30px;
+  opacity: 0;
+  pointer-events: none;
+}
+aside.show {
+  left: 0;
+  opacity: 1;
+  pointer-events: all;
+}
+aside button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 2px solid var(--primary) !important;
+  background: var(--primary) !important;
+}
+aside h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+aside ul {
+  margin-top: 50px;
+}
+aside ul li {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+aside .social {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+aside .social i {
+  margin: 0 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Section */
+section {
+  width: 100%;
+  background: var(--primary);
+}
+section .flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+section .card {
+  width: 60%;
+  background: var(--light);
+  box-shadow: 0 0 10px 2px #0003;
+  padding: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
